@@ -3,11 +3,12 @@ import string
 
 script, filename = argv
 
-fin = open(filename)
-content = fin.read().lower()
+def main():
+	fin = open(filename)
+	content = fin.read().lower()
 
-print content
+	print content
 
 if __name__ == "__main__":
 	main()
-	
+
