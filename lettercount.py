@@ -10,17 +10,20 @@ def main():
 	alphabet = string.lowercase
 	for letter in alphabet:
 		letters.append(letter)
-	print letters
 
 	# Initialize a list of 26 zeros to align with letter_list
 	counts = [0] * 26
-	print counts
-
 
 	fin = open(filename)
 	content = fin.read().lower()
 	for char in content:
-		pass
+		if char in letters:
+			count = letters.index(char)
+			counts[count] += 1
+
+	for i in range(26):
+		print letters[i], counts[i]
+
 
 
 
